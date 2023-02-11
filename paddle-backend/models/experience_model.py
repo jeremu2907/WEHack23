@@ -11,6 +11,9 @@ class ExperienceModel(BaseModel):
     country: str = Field(...)
     imageUrl: str = Field(...)
     description: str = Field(...)
+    date: str = Field(...)
+    summary: str = Field(...)
+    videoUrl: str = Field(...)
 
     class Config:
         allow_population_by_field_name = True

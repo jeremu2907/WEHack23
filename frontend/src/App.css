@@ -1,7 +1,27 @@
+:root {
+  --main-bg-color: rgb(54, 54, 54);
+}
+
+body::-webkit-scrollbar{
+  width:0px;
+  
+}
+body::-webkit-scrollbar-thumb{
+  width:4px;
+}
+
+body{
+  margin: 0;
+  background-color: var(--main-bg-color);
+}
+
+
 .App {
   text-align: center;
-  height: 100vh;
+  height: auto;
   width:100vw;
+  display: flex;
+  flex-direction: column;
 }
 
 .App-logo {

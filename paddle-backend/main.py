@@ -16,13 +16,17 @@ async def root():
 
 
 @app.get("/api/v1/experience")
-async def get_experience_by_id(id: str):
-    return {"message": f"Hello {id}"}
+async def get_experience(id: str = None, name: str = None):
+    if id != None:
+        created_experience = await db["experience"].find_one({"_id": id})
+    elif name != None:
+        created_experience = await db["experience"].find_one({"name": name})
+    return JSONResponse(status_code=status.HTTP_201_CREATED, content=created_experience)
 
 
 @app.post("/api/v1/experience", response_description="Add new experience", response_model=ExperienceModel)
 async def create_experience(experience: ExperienceModel = Body(...)):
     experience = jsonable_encoder(experience)
     new_experience = await db["experience"].insert_one(experience)
-    created_student = await db["experience"].find_one({"_id": new_experience.inserted_id})
-    return JSONResponse(status_code=status.HTTP_201_CREATED, content=created_student)
+    created_experience = await db["experience"].find_one({"_id": new_experience.inserted_id})
+    return JSONResponse(status_code=status.HTTP_201_CREATED, content=created_experience)

@@ -23,13 +23,16 @@ async def get_experience(id: str = None):
 
 
 @app.get("/api/v1/experiences")
-async def get_experiences(name: str = None, city: str = None, groupby: str = 'name'):
+async def get_experiences(name: str = None, city: str = None, country: str = None, groupby: str = 'name'):
     resp_body = []
+    print(country)
     db_args = {}
     if name is not None:
         db_args['name'] = {'$eq': name}
     if city is not None:
         db_args['city'] = {'$eq': city}
+    if country is not None:
+        db_args['country'] = {'$eq': country}
     cursor = db["experience"].find(db_args).sort(groupby)
     for document in await cursor.to_list(length=100):
         resp_body.append(document)
@@ -43,7 +46,7 @@ async def create_experience(experience: ExperienceModel = Body(...)):
     return JSONResponse(status_code=status.HTTP_201_CREATED, content=inserted_experience.inserted_id)
 
 
-@app.post("/api/v1/experiences", response_description="Add new experiences", response_model=ExperienceModelList)
+@app.post("/api/v1/experiences", response_description="Add new experiences", response_model=List)
 async def create_experience(experiences: List[ExperienceModel] = Body(...)):
     experiences = jsonable_encoder(experiences)
     inserted_experiences = await db["experience"].insert_many(experiences)

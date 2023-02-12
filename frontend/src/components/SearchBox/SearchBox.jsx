@@ -1,6 +1,7 @@
 import React from 'react';
 import $ from "jquery"
 import * as apiCall from '../apiCalls';
+import "./SearchBox.css"
 
 //city country
 export default function SearchBox() {
@@ -28,13 +29,14 @@ export default function SearchBox() {
     color: "white",
     width: "70%",
     fontSize: "25px",
+    fontFamily: "'Montserrat', sans-serif",
     height: "40px",
     margin: "50px 0px",
     border: "none",
     borderBottom: "solid 2px white",
     boxShadow: "10px 10px 50px rgba(0,0,0,0.1)",
     fontWeight: "bold",
-    backgroundImage: "linear-Gradient(rgba(0,0,0,0), rgba(0,0,0,0))",
+    backgroundImage: "linear-Gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1))",
     backgroundColor: "rgba(0,0,0,0)",
 
   }
@@ -43,10 +45,10 @@ export default function SearchBox() {
     borderRadius: "2px",
     cursor: "pointer",
     fontSize: "30px",
+    fontFamily: "'Montserrat', sans-serif",
     backgroundImage: "linear-Gradient(rgba(0,0,0,0), rgba(0,0,0,0))",
     backgroundColor: "rgba(0,0,0,0)",
     border: "none",
-    color: "#f4cc70"
   }
 
   const divStyle = {
@@ -58,6 +60,7 @@ export default function SearchBox() {
   
   const labelStyle = {
     color: "white",
+    fontFamily: "'Montserrat', sans-serif",
     marginRight: "auto"
   }
 
@@ -66,17 +69,17 @@ return(
 <div style={{width:"100%", height:"auto", display: "flex", flexDirection: "column"}}>
   <div style={divStyle}>
     <input type ="text" id="searchInput" style={searchBoxStyle}/>
-    <button onClick={handleClick} style={submitButtonStyle}>submit</button>
+    <button onClick={handleClick} style={submitButtonStyle} id="submitButton">submit</button>
   </div>
   <div style={{display: "flex",justifyContent: "space-evenly", alignItems: "center"}}>
-    <h3 style={{color: "#f4cc70", margin: "10px 10px 10px auto"}}>Search by:</h3>
-    <label style={labelStyle}>city
+    <h3 style={{color: "#f4cc70", margin: "10px 10px 10px auto", fontFamily: "'Montserrat', sans-serif",}}>Search by:</h3>
+    <label style={labelStyle}>City
       <input type="radio" name="field" id="rcity"/>
     </label>
-    <label style={labelStyle}>country
+    <label style={labelStyle}>Country
       <input type="radio" name="field" id="rcountry"/>
     </label>
-    <label style={labelStyle}>all
+    <label style={labelStyle}>All
       <input type="radio" name="field" id="rall"/>
     </label>
   </div>

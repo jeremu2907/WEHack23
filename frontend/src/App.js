@@ -1,6 +1,5 @@
 import './App.css';
 import Gmap from './components/Gmap.jsx'
-
 import LandingQuote from './components/LandingQuote/LandingQuote';
 import SelectionPanel from './components/SelectionPanel/SelectionPanel';
 
@@ -11,10 +10,10 @@ function App() {
   }
 
   const logoStyle = {
-    fontSize: "100px",
+    fontSize: "150px",
     color: "#6ab187",
     marginLeft: "100px",
-    textShadow: "10px 10px 50px rgba(0,0,0,0.3)"
+    textShadow: "10px 10px 50px rgba(0,0,0,0.6)"
   }
 
   const rowFlexBox = {
@@ -42,7 +41,7 @@ function App() {
   return (
     <div className="App" id="App">
         <section style={sectionStyle}>
-          <h1 style={logoStyle}>Paddle</h1>
+          <h1 style={logoStyle} id="paddle">Paddle</h1>
           {LandingQuote()}
           <h1 className="linkButton" onClick={tripSelect}>Plan Trips</h1>
         </section>

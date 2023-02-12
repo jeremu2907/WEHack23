@@ -4,9 +4,10 @@ import $ from 'jquery'
 export default function LandingQuote(){
     let quoteList = ["the World", "Cultures", "Communities"];
     const styles = {
+        fontFamily: "'Montserrat', sans-serif",
         color: "white",
-        fontSize: "100px",
-        margin: "100px 0px 100px 0px"
+        fontSize: "80px",
+        margin: "0px 0px 0px 0px"
     }
     const containerStyle  = {
         display: "flex",

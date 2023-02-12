@@ -5,24 +5,22 @@ import * as apiCalls from './apiCalls.js'
 export default function Gmap() {
   // Declare a new state variable, which we'll call "count"
     useEffect(() => {
-        apiCalls.searchByName("UT Dallas");
+        let r = apiCalls.searchCityCountry()
+        console.log(r)
         
         if (navigator.geolocation) {
-
-
-
             const map = new google.maps.Map(document.getElementById("map"), {
                 center: { lat: -33.8688, lng: 151.2195 },
                 zoom: 13,
               });
-              const input = document.getElementById("pac-input");
+              const input = document.getElementById("searchInput");
               // Specify just the place data fields that you need.
               const autocomplete = new google.maps.places.Autocomplete(input, {
                 fields: ["place_id", "geometry", "formatted_address", "name"],
               });
             
               autocomplete.bindTo("bounds", map);
-              map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+            //   map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
             
               const infowindow = new google.maps.InfoWindow();
               const infowindowContent = document.getElementById("infowindow-content");
@@ -57,12 +55,14 @@ export default function Gmap() {
                   location: place.geometry.location,
                 });
                 marker.setVisible(true);
-                infowindowContent.children.namedItem("place-name").textContent = place.name;
-                infowindowContent.children.namedItem("place-id").textContent =
-                  place.place_id;
-                infowindowContent.children.namedItem("place-address").textContent =
-                  place.formatted_address;
-                infowindow.open(map, marker);
+                // infowindowContent.children.namedItem("place-name").textContent = place.name;
+                // infowindowContent.children.namedItem("place-id").textContent =
+                //   place.place_id;
+            
+                console.log(place.place_id)
+                // infowindowContent.children.namedItem("place-address").textContent =
+                //   place.formatted_address;
+                // infowindow.open(map, marker);
               });
 
 
@@ -104,6 +104,13 @@ export default function Gmap() {
     })
 
     return (
-        <div id = "map" style={{height: "100%", width: "auto"}}></div>
+        <div style={{height: "100%", width: "auto"}}>
+            <div id = "map" style={{height: "100%", width: "auto"}}></div>
+            {/* <div id="infowindow-content">
+                <span id="place-name"></span><br />
+                <strong>Place ID:</strong> <span id="place-id"></span><br />
+                <span id="place-address"></span>
+            </div> */}
+        </div>
     );
 }

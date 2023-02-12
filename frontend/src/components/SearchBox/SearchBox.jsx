@@ -17,29 +17,29 @@ export default function SearchBox() {
 
   const searchBoxStyle = {
     color: "grey",
-    width: "80%",
+    width: "70%",
     fontSize: "25px",
     height: "40px",
-    margin: "50px 0px"
-
+    margin: "50px 0px",
+    border: "none",
+    boxShadow: "10px 10px 50px rgba(0,0,0,0.1)"
   }
 
   const submitButtonStyle = {
     borderRadius: "2px",
     cursor: "pointer",
-    fontSize: "15px",
-    margin: "50px 0px",
-    //background: "rgb(2,0,36)"
-    //background: "rgb(2,0,36), linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(0,212,255,0) 100%)"
-
-
+    fontSize: "30px",
+    backgroundImage: "linear-Gradient(rgba(0,0,0,0), rgba(0,0,0,0))",
+    backgroundColor: "rgba(0,0,0,0)",
+    border: "none",
+    color: "white"
   }
 
   const divStyle = {
-    width: "80%",
+    width: "100%",
     display: "flex",
     flexDirection: "row",
-    justifyContent: "space-between"
+    justifyContent: "space-evenly"
   }
 
 

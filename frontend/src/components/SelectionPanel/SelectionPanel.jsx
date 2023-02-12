@@ -1,5 +1,6 @@
 import React from 'react'
 import SearchBox from '../SearchBox/SearchBox'
+import './SelectionPanel.css'
 
 export default function SelectionPanel() {
     const containerStyle = {
@@ -31,7 +32,7 @@ export default function SelectionPanel() {
     return(
         <div style={containerStyle}>
             {SearchBox()}
-            <div style={overflowStyle} className="overflowStyle">
+            <div style={overflowStyle} id="overflowStyle">
                 {SearchBox()}
                 {SearchBox()}
                 {SearchBox()}

@@ -85,20 +85,25 @@ export default function SelectionPanel() {
       }
     
       const submitButtonStyle = {
-        borderRadius: "2px",
+        borderRadius: "20px",
         cursor: "pointer",
-        fontSize: "30px",
+        fontSize: "15px",
         fontFamily: "'Montserrat', sans-serif",
         backgroundImage: "linear-Gradient(rgba(0,0,0,0), rgba(0,0,0,0))",
-        backgroundColor: "rgba(0,0,0,0)",
+        backgroundColor: "rgb(222, 122, 34)",
         border: "none",
+        padding: "2px 10px",
+        color: "white",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
       }
     
       const divStyle = {
         width: "100%",
         display: "flex",
         flexDirection: "row",
-        justifyContent: "space-evenly"
+        justifyContent: "space-evenly",
       }
       
       const labelStyle = {
@@ -130,7 +135,8 @@ export default function SelectionPanel() {
             <div style={{width:"100%", height:"auto", display: "flex", flexDirection: "column"}}>
                 <div style={divStyle}>
                     <input type ="text" id="searchInput" style={searchBoxStyle}/>
-                    <button onClick={handleClick} style={submitButtonStyle} id="submitButton">submit</button>
+                    
+                    <button onClick={handleClick} style={submitButtonStyle} id="submitButton"> Search </button>      
                 </div>
                 <div style={{display: "flex",justifyContent: "space-evenly", alignItems: "center"}}>
                     <h3 style={{color: "#f4cc70", margin: "10px 10px 10px auto", fontFamily: "'Montserrat', sans-serif",}}>Search by:</h3>

@@ -13,11 +13,14 @@ export function searchGeneral(){
         return response.json();
     }).then(data => {
         localStorage.setItem("events", JSON.stringify(data))
-    }).then(renderMap)
+    }).then(data => {
+        renderMap()
+        return data;
+    })
 
 }
 
-export function searchCity(city){
+export async function searchCity(city){
     const url = "http://justpaddle.tech/api/v1/experiences?city=" + city
     fetch(url, {
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
@@ -30,7 +33,11 @@ export function searchCity(city){
         return response.json();
     }).then(data => {
         localStorage.setItem("events", JSON.stringify(data))
-    }).then(renderMap)
+        return data
+    }).then(data => {
+        renderMap()
+        return data;
+    })
 }
 
 export function searchCountry(country){
@@ -46,5 +53,8 @@ export function searchCountry(country){
         return response.json();
     }).then(data => {
         localStorage.setItem("events", JSON.stringify(data))
-    }).then(renderMap)
+    }).then(data => {
+        renderMap()
+        return data;
+    })
 }

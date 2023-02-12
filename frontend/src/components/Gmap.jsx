@@ -73,7 +73,7 @@ export default function Gmap() {
 
     return (
         <div style={{height: "100%", width: "auto"}}>
-            <div id = "map" style={{height: "100%", width: "auto"}}></div>
+            <div id = "map" style={{height: "100%", width: "auto", borderRadius: "10px"}}></div>
             {/* <div id="infowindow-content">
                 <span id="place-name"></span><br />
                 <strong>Place ID:</strong> <span id="place-id"></span><br />

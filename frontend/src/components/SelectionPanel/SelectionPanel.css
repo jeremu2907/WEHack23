@@ -6,4 +6,5 @@
 #overflowStyle::-webkit-scrollbar-thumb{
     width: 8px;
     background-color: #f4cc70;
+    border-radius: 5px;
 }

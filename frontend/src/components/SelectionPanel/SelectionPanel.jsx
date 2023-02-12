@@ -111,7 +111,6 @@ export default function SelectionPanel() {
         backdropFilter: "blur(3px)",
         height: "100%",
         width: "100%",
-        border: "solid 3px #6ab187",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",

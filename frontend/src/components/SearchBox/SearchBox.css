@@ -1,0 +1,9 @@
+#submitButton{
+    color: #f4cc70;
+    transition: margin-bottom 0.5s, color 0.5s;
+}
+
+#submitButton:hover{
+    margin-bottom: 5px;
+    color: white;
+}

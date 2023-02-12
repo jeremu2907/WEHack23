@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Montserrat&display=swap');
+
+#paddle{
+  font-family: 'Comfortaa', cursive;
+}
+
+
 :root {
   --main-bg-color: rgb(54, 54, 54);
   --accent-color: rgb(219, 192, 255);
@@ -57,16 +64,17 @@ body{
 }
 
 .linkButton{
-  font-size: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
   color: white;
-  margin-left: 100px;
+  margin: 120px 0 0 100px;
   border-bottom: solid white 2px;
   transition: color 0.3s ease-in-out, margin-bottom 0.3s ease-in-out;
   cursor: pointer;
 }
 
 .linkButton:hover{
-  color: var(--accent-color);
+  color: #f4cc70;
 }
 
 #video1 {

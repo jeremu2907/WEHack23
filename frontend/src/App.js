@@ -34,12 +34,20 @@ function App() {
     backgroundImage: "linear-Gradient(rgba(0,0,0,0), rgba(2,33,31, 0.45),rgba(2,33,31, 0.9)"
   }
 
+
   const tripSelect = () => {
     document.getElementById("selections").scrollIntoView({behavior: "smooth"})
   }
 
   return (
+
     <div className="App" id="App">
+      <div>
+        <video id="video1" autoPlay loop muted style={{shadedRegion,opacity: 0.5}}>
+          <source src={require("./videos/shore.mp4")} type="video/mp4" />
+        </video>
+      </div>
+      
         <section style={sectionStyle}>
           <h1 style={logoStyle} id="paddle">Paddle</h1>
           {LandingQuote()}

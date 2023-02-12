@@ -73,5 +73,5 @@ body{
 }
 
 .linkButton:hover{
-  color: var(--accent-color);
+  color: #f4cc70;
 }

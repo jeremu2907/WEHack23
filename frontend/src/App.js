@@ -13,7 +13,7 @@ function App() {
     fontSize: "150px",
     color: "#6ab187",
     marginLeft: "100px",
-    textShadow: "10px 10px 50px rgba(0,0,0,0.6)"
+    textShadow: "10px 10px 50px rgba(0,0,0,0.2)"
   }
 
   const rowFlexBox = {

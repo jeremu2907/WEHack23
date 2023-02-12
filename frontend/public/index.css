@@ -1,0 +1,17 @@
+#cover{
+    position: absolute;
+    background-color: black;
+    height: 200vh;
+    width: 100vw;
+    animation: forwards 1s load ease-in
+}
+
+@keyframes load {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}

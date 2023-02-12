@@ -88,6 +88,8 @@ async def get_experiences(name: str = None, city: str = None, country: str = Non
 @app.post("/api/v1/experience", response_description="Add new experience", response_model=ExperienceModel)
 async def create_experience(experience: ExperienceModel = Body(...)):
     experience = jsonable_encoder(experience)
+    experience.city = experience.city.lower()
+    experience.country = experience.country.lower()
     inserted_experience = await db["experience"].insert_one(experience)
     return JSONResponse(status_code=status.HTTP_201_CREATED, content=inserted_experience.inserted_id)
 
@@ -95,5 +97,8 @@ async def create_experience(experience: ExperienceModel = Body(...)):
 @app.post("/api/v1/experiences", response_description="Add new experiences", response_model=List)
 async def create_experience(experiences: List[ExperienceModel] = Body(...)):
     experiences = jsonable_encoder(experiences)
+    for experience in experiences:
+        experience.city = experience.city.lower()
+        experience.country = experience.country.lower()
     inserted_experiences = await db["experience"].insert_many(experiences)
     return JSONResponse(status_code=status.HTTP_201_CREATED, content=inserted_experiences.inserted_ids)

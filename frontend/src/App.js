@@ -1,5 +1,7 @@
 import './App.css';
 import Gmap from './components/Gmap.jsx'
+import SearchBox from './components/SearchBox/SearchBox.jsx'
+
 import LandingQuote from './components/LandingQuote/LandingQuote';
 
 function App() {
@@ -12,6 +14,7 @@ function App() {
     <div className="App" id="App">
         <section style={sectionStyle}>
           {LandingQuote()}
+          {SearchBox()}
         </section>
         <section style={sectionStyle}>
           {Gmap()}

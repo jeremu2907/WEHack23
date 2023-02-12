@@ -15,10 +15,10 @@ export default function LandingQuote(){
                     opacity: "0"
                 }, 1000, function() {
                     i++;
-                    $("#welcomeMessage").html(quoteList[i])
+                    $("#welcomeMessage").html(quoteList[i%quoteList.length])
                     $("#welcomeMessage").animate({
                         opacity: "1"
-                    }, 1000, welcomeMessage(i));
+                    }, 500, welcomeMessage(i));
                 });  
         },1500);
     }

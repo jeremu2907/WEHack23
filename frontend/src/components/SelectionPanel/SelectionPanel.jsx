@@ -3,7 +3,7 @@ import SearchBox from '../SearchBox/SearchBox'
 
 export default function SelectionPanel() {
     const containerStyle = {
-        backdropFilter: "blur(10px)",
+        backdropFilter: "blur(3px)",
         height: "100%",
         width: "100%",
         border: "solid white 2px",

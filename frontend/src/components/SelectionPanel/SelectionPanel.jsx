@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import EventListing from '../EventListing/EventListing'
 import SearchBox from '../SearchBox/SearchBox'
 
 export default function SelectionPanel() {
@@ -15,6 +16,7 @@ export default function SelectionPanel() {
     return(
         <div style={containerStyle}>
             {SearchBox()}
+            {EventListing()}
         </div>
     )
 }

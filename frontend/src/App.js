@@ -46,6 +46,7 @@ function App() {
           <h1 style={logoStyle}>Paddle</h1>
           {LandingQuote()}
           <h1 className="linkButton" onClick={tripSelect}>Browse Trips</h1>
+          {SearchBox()}
         </section>
 
         <section id="selections" style={{...sectionStyle,...rowFlexBox,...shadedRegion}}>

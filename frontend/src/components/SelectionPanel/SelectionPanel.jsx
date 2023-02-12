@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import SearchBox from '../SearchBox/SearchBox'
 
 export default function SelectionPanel() {
@@ -6,7 +6,7 @@ export default function SelectionPanel() {
         backdropFilter: "blur(3px)",
         height: "100%",
         width: "100%",
-        border: "solid white 2px",
+        border: "solid 3px #6ab187",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",

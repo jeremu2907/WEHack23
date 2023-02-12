@@ -41,12 +41,25 @@ export function renderMap(){
       
         autocomplete.bindTo("bounds", map);
         for(var i in events){
-          console.log(events[i])
-          new google.maps.Marker({
+          const content = 
+            "<h1>" + events[i].name + "</h1>" + 
+            "<h3>" + events[i].summary + "</h3>" + 
+            "<p>" + events[i].description + "</p>";
+          const contentWindow = new google.maps.InfoWindow({
+            content: content,
+            ariaLabel: events[i].name
+          });
+          const marker = new google.maps.Marker({
               position : new google.maps.LatLng(events[i].coord[0],events[i].coord[1]),
               map,
               title: "Current Location",
               label: {text:events[i].name, backgroundColor: "white"}
+          })
+          marker.addListener("click", () => {
+            contentWindow.open({
+              anchor: marker,
+              map,
+            })
           })
         }
     }

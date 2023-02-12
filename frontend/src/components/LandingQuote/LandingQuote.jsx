@@ -2,10 +2,17 @@ import React, { useEffect } from 'react';
 import $ from 'jquery'
 
 export default function LandingQuote(){
-    let quoteList = ["Explore the World", "Explore Cultures", "Explore Communities"];
+    let quoteList = ["the World", "Cultures", "Communities"];
     const styles = {
+        fontFamily: "'Montserrat', sans-serif",
         color: "white",
-        fontSize: "100px",
+        fontSize: "80px",
+        margin: "0px 0px 0px 0px"
+    }
+    const containerStyle  = {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "flex-start",
         marginLeft: "100px"
     }
 
@@ -28,8 +35,8 @@ export default function LandingQuote(){
     })
 
     return(
-        <div>
-            <h1 id="welcomeMessage" style={styles}>{quoteList[0]}</h1>
+        <div style={containerStyle}>
+            <h1 style={styles}>Explore&nbsp;</h1><h1 id="welcomeMessage" style={styles}>{quoteList[0]}</h1>
         </div>
     )
 }

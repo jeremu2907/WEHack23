@@ -25,12 +25,19 @@ class ExperienceModel(BaseModel):
         arbitrary_types_allowed = True
         json_encoders = {ObjectId: str}
         schema_extra = {
-            "example": {
-                "name": "saving turtles",
-                "coord": "[  ]",
-                "address": "some address",
-                "country": "madagascar",
-                "imageUrl": "",
-                "description": ""
+            "example":   {
+                "_id": "5f6b52b9d24a8c73ca94fcaa",
+                "name": "Beach Cleanup at Nassau",
+                "coord": [25.0478, -77.3554],
+                "address": "West Bay St, Nassau, Bahamas",
+                "country": "Bahamas",
+                "city": "Nassau",
+                "image_url": "https://i.ibb.co/m43txHk/ocean-4920792-1280.jpg",
+                "description": "Join us for a morning of fun and community service as we work together to clean up the beautiful beaches of Nassau. Our goal is to keep our shorelines litter-free and safe for wildlife.",
+                "date": "2023-03-15",
+                "time": "9:00 AM",
+                "summary": "Join us for a morning of beach cleanup in Nassau!",
+                "video_url": "https://www.example.com/beachcleanup1.mp4",
+                "tags": ["beach", "cleanup", "community", "Nassau"]
             }
         }

@@ -1,5 +1,7 @@
 import './App.css';
 import Gmap from './components/Gmap.jsx'
+import SearchBox from './components/SearchBox/SearchBox.jsx'
+
 import LandingQuote from './components/LandingQuote/LandingQuote';
 import SelectionPanel from './components/SelectionPanel/SelectionPanel';
 

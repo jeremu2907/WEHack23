@@ -1,5 +1,6 @@
 :root {
   --main-bg-color: rgb(54, 54, 54);
+  --accent-color: rgb(219, 192, 255);
 }
 
 body::-webkit-scrollbar{
@@ -13,11 +14,15 @@ body::-webkit-scrollbar-thumb{
 body{
   margin: 0;
   background-color: var(--main-bg-color);
+  background-image: url("./bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 
 .App {
-  text-align: center;
+  /* text-align: center; */
   height: auto;
   width:100vw;
   display: flex;
@@ -50,11 +55,15 @@ body{
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.linkButton{
+  font-size: 50px;
+  color: white;
+  margin-left: 100px;
+  border-bottom: solid white 2px;
+  transition: color 0.3s ease-in-out, margin-bottom 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.linkButton:hover{
+  color: var(--accent-color);
 }

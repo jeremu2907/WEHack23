@@ -1,7 +1,5 @@
 import './App.css';
 import Gmap from './components/Gmap.jsx'
-import SearchBox from './components/SearchBox/SearchBox.jsx'
-
 import LandingQuote from './components/LandingQuote/LandingQuote';
 import SelectionPanel from './components/SelectionPanel/SelectionPanel';
 
@@ -12,10 +10,10 @@ function App() {
   }
 
   const logoStyle = {
-    fontSize: "100px",
-    color: "white",
+    fontSize: "150px",
+    color: "#6ab187",
     marginLeft: "100px",
-    textShadow: "10px 10px 50px rgba(0,0,0,0.3)"
+    textShadow: "10px 10px 50px rgba(0,0,0,0.2)"
   }
 
   const rowFlexBox = {
@@ -33,7 +31,7 @@ function App() {
   // }
 
   const shadedRegion = {
-    backgroundImage: "linear-Gradient(rgba(0,0,0,0), rgba(0,0,0,0.6))"
+    backgroundImage: "linear-Gradient(rgba(0,0,0,0), rgba(2,33,31, 0.45),rgba(2,33,31, 0.9)"
   }
 
   const tripSelect = () => {
@@ -43,9 +41,9 @@ function App() {
   return (
     <div className="App" id="App">
         <section style={sectionStyle}>
-          <h1 style={logoStyle}>Paddle</h1>
+          <h1 style={logoStyle} id="paddle">Paddle</h1>
           {LandingQuote()}
-          <h1 className="linkButton" onClick={tripSelect}>Browse Trips</h1>
+          <h1 className="linkButton" onClick={tripSelect}>Plan Trips</h1>
         </section>
 
         <section id="selections" style={{...sectionStyle,...rowFlexBox,...shadedRegion}}>

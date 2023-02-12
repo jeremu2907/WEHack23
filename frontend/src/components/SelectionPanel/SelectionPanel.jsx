@@ -12,9 +12,35 @@ export default function SelectionPanel() {
         alignItems: "center",
     }
 
+    const overflowStyle = {
+        overflowY: 'auto',
+        display: 'flex',
+        flexDirection: 'column',
+        height: 'auto',
+        width: '100%',
+        // border: "solid 5px red"
+    }
+
+    const test = {
+        height: "200px",
+        width: "100%",
+        backgroundColor: "red",
+        // marginTop: "50px"
+    }
+
     return(
         <div style={containerStyle}>
             {SearchBox()}
+            <div style={overflowStyle} className="overflowStyle">
+                {SearchBox()}
+                {SearchBox()}
+                {SearchBox()}
+                {SearchBox()}
+                {SearchBox()}
+                {SearchBox()}
+                {SearchBox()}
+                {SearchBox()}
+            </div>
         </div>
     )
 }

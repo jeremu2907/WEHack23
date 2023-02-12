@@ -31,7 +31,7 @@ export default function SearchBox() {
     fontSize: "25px",
     fontFamily: "'Montserrat', sans-serif",
     height: "40px",
-    margin: "50px 0px",
+    margin: "10px 0px",
     border: "none",
     borderBottom: "solid 2px white",
     boxShadow: "10px 10px 50px rgba(0,0,0,0.1)",

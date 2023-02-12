@@ -33,14 +33,14 @@ export default function SelectionPanel() {
         <div style={containerStyle}>
             {SearchBox()}
             <div style={overflowStyle} id="overflowStyle">
+                {/* {SearchBox()}
                 {SearchBox()}
                 {SearchBox()}
                 {SearchBox()}
                 {SearchBox()}
                 {SearchBox()}
                 {SearchBox()}
-                {SearchBox()}
-                {SearchBox()}
+                {SearchBox()} */}
             </div>
         </div>
     )
